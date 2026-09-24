@@ -1,0 +1,1394 @@
+/* ==========================================================================
+   JAPANDI NATURE DESIGN SYSTEM & PALETTE FOR B+IN
+   Palette:
+     - sand beige: #c4b5a3 / #dfd6cb
+     - oat milk: #eee8de / #f7f3ec
+     - soft sage: #88967c / #738267
+     - light oak wood: #b8956e / #c4a47d
+     - stone gray: #aba49c / #8c857d
+     - charred timber: #27221e
+     - natural canvas: #f2ece2
+   ========================================================================== */
+
+:root {
+  --jp-sand-beige: #c4b5a3;
+  --jp-sand-beige-light: #dfd6cb;
+  --jp-sand-beige-subtle: #eae3d9;
+  --jp-oat-milk: #eee8de;
+  --jp-oat-milk-light: #f7f3ec;
+  --jp-soft-sage: #88967c;
+  --jp-soft-sage-hover: #76846a;
+  --jp-soft-sage-light: #dbe2d6;
+  --jp-soft-sage-dark: #58644e;
+  --jp-light-oak: #b8956e;
+  --jp-light-oak-light: #ddcaa9;
+  --jp-light-oak-dark: #8c6d48;
+  --jp-stone-gray: #aba49c;
+  --jp-stone-gray-light: #e4dfd9;
+  --jp-stone-gray-dark: #6e6760;
+  --jp-charred-timber: #27221e;
+  --jp-canvas-bg: #f2ece2;
+  --jp-card-bg: #fbf9f5;
+  --jp-border-soft: #ddd6cb;
+  --jp-border-wood: #c9ad8b;
+
+  --jp-font-sans: 'Plus Jakarta Sans', 'Manrope', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --jp-font-serif: 'Playfair Display', 'Philosopher', Georgia, serif;
+}
+
+/* Base Body Styling: Warm Textured Canvas & Oat Milk */
+html {
+  background-color: var(--jp-canvas-bg) !important;
+  color: var(--jp-charred-timber) !important;
+  font-family: var(--jp-font-sans) !important;
+}
+
+body {
+  background-color: var(--jp-canvas-bg) !important;
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(136, 150, 124, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(184, 149, 110, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #f5f0e8 0%, #eee8de 50%, #f2ece2 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--jp-charred-timber) !important;
+  font-family: var(--jp-font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+}
+
+/* Custom Minimalist Japandi Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--jp-oat-milk);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--jp-stone-gray);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jp-soft-sage);
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION — JAPANDI OAT MILK & LIGHT OAK
+   ========================================================================== */
+
+#main-header {
+  background: rgba(247, 243, 236, 0.95) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid var(--jp-border-soft) !important;
+  box-shadow: 0 4px 20px rgba(39, 34, 30, 0.04) !important;
+  transition: all 0.25s ease;
+}
+
+#main-header .bg-\[\#141414\],
+#main-header .bg-\[\#141414\]\/95,
+#main-header .bg-\[linear-gradient\(180deg\,rgba\(20\,20\,20\,0\.85\)_0\%\,rgba\(20\,20\,20\,0\.3\)_100\%\)\] {
+  background: rgba(247, 243, 236, 0.95) !important;
+  border-bottom: 1px solid var(--jp-border-soft) !important;
+}
+
+#main-header .border-b,
+#main-header .border-\[\#2e2e2e\],
+#main-header .border-\[\#353535\] {
+  border-color: var(--jp-border-soft) !important;
+}
+
+/* Header Text & Links */
+#main-header span,
+#main-header button,
+#main-header a {
+  color: var(--jp-charred-timber) !important;
+  font-family: var(--jp-font-sans) !important;
+}
+
+#main-header nav a,
+#main-header nav button,
+#main-header .tracking-\[0\.16em\] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--jp-charred-timber) !important;
+  background-color: transparent !important;
+  border: 1.5px solid transparent !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+}
+
+#main-header nav a:hover,
+#main-header nav button:hover {
+  background-color: var(--jp-sand-beige-light) !important;
+  border-color: var(--jp-border-soft) !important;
+  color: var(--jp-charred-timber) !important;
+  border-radius: 9999px !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Active navigation item pill (e.g., "VỀ CHÚNG TÔI", "HÀNG CÓ SẴN") */
+#main-header nav button[class*="border-[#aeb8c2]"],
+#main-header nav button[class*="border-b"],
+#main-header nav button.border-b,
+#main-header nav a[class*="border-[#aeb8c2]"] {
+  background-color: var(--jp-soft-sage) !important;
+  border: 1.5px solid var(--jp-soft-sage) !important;
+  border-radius: 9999px !important;
+  padding: 6px 18px !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(136, 150, 124, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+#main-header nav button[class*="border-[#aeb8c2]"] span,
+#main-header nav button[class*="border-b"] span,
+#main-header nav button.border-b span,
+#main-header nav a[class*="border-[#aeb8c2]"] span {
+  color: #ffffff !important;
+}
+
+#main-header nav button[class*="border-[#aeb8c2]"]:hover,
+#main-header nav button.border-b:hover {
+  background-color: var(--jp-soft-sage-dark) !important;
+  border-color: var(--jp-soft-sage-dark) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+}
+
+/* Contact Us Button: Japandi Soft Sage / Light Oak Pill */
+#header-write-us-btn,
+button#header-write-us-btn {
+  border: 1.5px solid var(--jp-charred-timber) !important;
+  border-radius: 9999px !important;
+  padding: 6px 18px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--jp-charred-timber) !important;
+  background-color: var(--jp-oat-milk) !important;
+  transition: all 0.25s ease !important;
+}
+
+#header-write-us-btn:hover,
+button#header-write-us-btn:hover {
+  background-color: var(--jp-soft-sage) !important;
+  border-color: var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+}
+#header-write-us-btn:hover span,
+button#header-write-us-btn:hover span {
+  color: #ffffff !important;
+}
+
+/* Location tooltip & Flyout */
+#header-location-tooltip {
+  background: var(--jp-card-bg) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  box-shadow: 0 12px 30px rgba(39, 34, 30, 0.08) !important;
+  border-radius: 12px;
+}
+#header-location-tooltip span,
+#header-location-tooltip p {
+  color: var(--jp-charred-timber) !important;
+}
+
+/* Mega Menu: Sand Beige & Oat Milk */
+#header-mega-menu,
+#header-design-mega-menu,
+#header-living-mega-menu {
+  background: var(--jp-oat-milk-light) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  box-shadow: 0 15px 40px rgba(39, 34, 30, 0.08) !important;
+  border-radius: 16px !important;
+  box-sizing: border-box !important;
+}
+
+#header-design-mega-menu {
+  width: 700px !important;
+  max-width: calc(100vw - 2rem) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#header-design-mega-menu .design-mega-grid {
+  display: grid !important;
+  grid-template-columns: 240px 1fr !important;
+  column-gap: 2rem !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#header-design-mega-menu .design-mega-grid > div {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+#header-design-mega-menu ul,
+#header-design-mega-menu li,
+#header-design-mega-menu li > button {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#header-living-mega-menu {
+  width: 360px !important;
+  max-width: calc(100vw - 2rem) !important;
+  box-sizing: border-box !important;
+}
+
+#header-living-mega-menu .space-y-2\.5,
+#header-living-mega-menu .space-y-3,
+#header-living-mega-menu button {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#header-living-mega-menu button,
+#header-design-mega-menu button {
+  border-radius: 12px !important;
+  text-align: left !important;
+}
+
+/* Explicit reset for column header buttons in mega menus */
+#header-mega-menu button.group\/col,
+#header-design-mega-menu button.group\/col,
+button.group\/col {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid var(--jp-border-soft) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  color: var(--jp-charred-timber) !important;
+}
+
+#header-mega-menu button.group\/col:hover,
+#header-design-mega-menu button.group\/col:hover,
+button.group\/col:hover {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-bottom-color: var(--jp-charred-timber) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#header-mega-menu button.group\/col span,
+#header-design-mega-menu button.group\/col span,
+button.group\/col span {
+  color: var(--jp-charred-timber) !important;
+}
+
+#header-mega-menu span,
+#header-mega-menu button,
+#header-design-mega-menu span,
+#header-design-mega-menu button,
+#header-living-mega-menu span,
+#header-living-mega-menu button {
+  color: var(--jp-charred-timber) !important;
+}
+
+#header-mega-menu button:hover,
+#header-design-mega-menu button:hover,
+#header-living-mega-menu button:hover {
+  color: var(--jp-soft-sage) !important;
+}
+
+#header-mega-menu .border-\[\#353535\],
+#header-design-mega-menu .border-\[\#353535\],
+#header-living-mega-menu .border-\[\#353535\] {
+  border-color: var(--jp-border-soft) !important;
+}
+
+#header-mega-menu [class*="text-\[\#aeb8c2\]"],
+#header-design-mega-menu [class*="text-\[\#aeb8c2\]"],
+#header-living-mega-menu [class*="text-\[\#aeb8c2\]"] {
+  color: var(--jp-charred-timber) !important;
+  font-weight: 600 !important;
+}
+
+#header-mega-menu [class*="text-\[\#b6b6b6\]"],
+#header-design-mega-menu [class*="text-\[\#b6b6b6\]"],
+#header-living-mega-menu [class*="text-\[\#b6b6b6\]"] {
+  color: var(--jp-muted-warm-gray) !important;
+}
+
+#header-mega-menu [class*="text-\[\#b6b6b6\]"]:hover,
+#header-design-mega-menu [class*="text-\[\#b6b6b6\]"]:hover,
+#header-living-mega-menu [class*="text-\[\#b6b6b6\]"]:hover {
+  color: var(--jp-charred-timber) !important;
+}
+
+#header-mega-menu [class*="text-\[\#868686\]"],
+#header-design-mega-menu [class*="text-\[\#868686\]"],
+#header-living-mega-menu [class*="text-\[\#868686\]"] {
+  color: var(--jp-muted-warm-gray) !important;
+}
+
+#header-mega-menu [class*="text-\[\#868686\]"]:hover,
+#header-design-mega-menu [class*="text-\[\#868686\]"]:hover,
+#header-living-mega-menu [class*="text-\[\#868686\]"]:hover {
+  color: var(--jp-charred-timber) !important;
+}
+
+#header-design-mega-menu .group\/item:hover,
+#header-living-mega-menu .group\/item:hover {
+  background-color: rgba(136, 150, 124, 0.08) !important;
+}
+
+#header-design-mega-menu button,
+#header-living-mega-menu button {
+  text-align: left;
+}
+
+/* ==========================================================================
+   GLOBAL CONTAINERS & SECTION BACKGROUNDS — JAPANDI NATURE
+   ========================================================================== */
+
+main,
+div.min-h-screen,
+.bg-\[\#141414\],
+.bg-\[\#181818\],
+.bg-\[\#1f1f1f\],
+.bg-\[\#161616\],
+.bg-\[\#202020\],
+.bg-\[\#25252b\],
+.bg-\[\#252525\] {
+  background-color: var(--jp-canvas-bg) !important;
+  color: var(--jp-charred-timber) !important;
+}
+
+/* Oat Milk & Stone Gray Cards */
+.bg-\[\#1a1a1a\],
+.bg-\[\#1f1f1f\],
+.bg-\[\#242424\],
+.bg-\[\#2a2a2a\] {
+  background-color: var(--jp-card-bg) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+}
+
+/* Sand Beige Accent Banners */
+section.bg-\[\#1a1a1a\],
+div.bg-\[\#222\],
+.bg-sand-accent {
+  background-color: var(--jp-sand-beige-light) !important;
+  border-color: var(--jp-border-soft) !important;
+}
+
+/* Global Text Colors */
+.text-white,
+.text-\[\#e8e8e8\],
+.text-\[\#d0d0d0\],
+.text-\[\#ccc\] {
+  color: var(--jp-charred-timber) !important;
+}
+
+.text-\[\#aeb8c2\],
+.text-\[\#b6b6b6\],
+.text-\[\#868686\],
+.text-\[\#999\],
+.text-\[\#777\],
+.text-\[\#5f5f5f\] {
+  color: var(--jp-stone-gray-dark) !important;
+}
+
+/* Global Borders */
+.border-\[\#2e2e2e\],
+.border-\[\#353535\],
+.border-\[\#383838\],
+.border-\[\#303030\],
+.border-\[\#282828\],
+.border-\[\#333\],
+.border-white\/10,
+.border-white\/20 {
+  border-color: var(--jp-border-soft) !important;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY — JAPANDI SERENE ELEGANCE
+   ========================================================================== */
+
+h1, h2, h3, h4,
+.font-philosopher {
+  font-family: var(--jp-font-sans) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--jp-charred-timber) !important;
+  text-transform: uppercase !important;
+}
+
+/* Subtext & descriptions */
+p {
+  color: var(--jp-charred-timber);
+}
+
+span:not([class*="text-white"]):not(button span):not(a span) {
+  color: var(--jp-charred-timber);
+}
+
+/* Hero Section Overlay & Gradient */
+#hero-section::before,
+#about-hero::before {
+  background: linear-gradient(180deg, rgba(242, 236, 226, 0) 0%, rgba(242, 236, 226, 0.75) 60%, rgba(242, 236, 226, 1) 100%) !important;
+}
+
+/* ==========================================================================
+   PRODUCT CARDS & GRIDS — JAPANDI OAT MILK & LIGHT OAK TRIM
+   ========================================================================== */
+
+/* Dedicated Product Cards */
+[id^="product-card-"],
+.product-card {
+  background-color: var(--jp-card-bg) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  border-radius: 24px !important;
+  padding: 14px 14px 20px 14px !important;
+  box-shadow: 0 4px 18px rgba(39, 34, 30, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+[id^="product-card-"]:hover,
+.product-card:hover {
+  border-color: var(--jp-light-oak) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 36px rgba(184, 149, 110, 0.16) !important;
+}
+
+/* Image container inside the product card */
+[id^="product-card-"] > div:first-child {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background-color: #eee8de !important;
+}
+
+[id^="product-card-"] img {
+  border-radius: 16px !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[id^="product-card-"]:hover img {
+  transform: scale(1.04) !important;
+}
+
+/* Details container inside the product card */
+[id^="product-card-"] > div:last-child {
+  padding: 12px 4px 2px 4px !important;
+  margin-top: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+/* Product title */
+[id^="product-card-"] h3 {
+  font-family: var(--jp-font-sans) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: var(--jp-charred-timber) !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+}
+
+/* Subtitle / Shade */
+[id^="product-card-"] p:nth-of-type(1) {
+  font-family: var(--jp-font-sans) !important;
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  color: var(--jp-stone-gray-dark) !important;
+  margin-top: 4px !important;
+  line-height: 1.4 !important;
+}
+
+/* Price */
+[id^="product-card-"] p:nth-of-type(2) {
+  font-family: var(--jp-font-sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--jp-charred-timber) !important;
+  margin-top: 8px !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Swatches container with ample bottom breathing room */
+[id^="product-card-"] .flex.items-center.gap-2 {
+  margin-top: 14px !important;
+  margin-bottom: 2px !important;
+  padding: 4px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Swatch buttons */
+[id^="product-card-"] button[type="button"][class*="rounded-full"] {
+  border: 1px solid rgba(39, 34, 30, 0.25) !important;
+  box-shadow: 0 1px 3px rgba(39, 34, 30, 0.12) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Active swatch ring: Soft Sage indicator with Oat Milk offset */
+[id^="product-card-"] button[class*="ring-2"],
+[id^="product-card-"] button[class*="ring-1"] {
+  box-shadow: 0 0 0 2px var(--jp-card-bg), 0 0 0 3.5px var(--jp-soft-sage) !important;
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-color: transparent !important;
+}
+
+/* Standalone articles and gallery cards */
+article {
+  background-color: var(--jp-card-bg) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 16px rgba(39, 34, 30, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+  padding: 14px 14px 20px 14px !important;
+}
+
+article:hover {
+  border-color: var(--jp-light-oak) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 32px rgba(184, 149, 110, 0.14) !important;
+}
+
+/* Japandi Organic Tags & Badges */
+span.badge,
+.badge-luxury {
+  background-color: var(--jp-soft-sage-light) !important;
+  color: var(--jp-soft-sage-dark) !important;
+  border: 1px solid var(--jp-soft-sage) !important;
+  font-weight: 700 !important;
+}
+
+/* Image Overlay Badges & Tags (e.g., "PHÒNG KHÁCH", "PHÒNG NGỦ", "PHÒNG LÀM VIỆC") */
+span.bg-black\/65,
+span.bg-black\/60,
+span.bg-black\/70,
+div[class*="absolute top-"] > span[class*="rounded-full"],
+div[class*="absolute top-"] > div[class*="rounded-full"],
+div[class*="absolute"] > span[class*="bg-black/"],
+div[class*="absolute"] > div[class*="bg-black/"] {
+  background-color: rgba(251, 249, 245, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  box-shadow: 0 4px 14px rgba(39, 34, 30, 0.12) !important;
+  color: var(--jp-charred-timber) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+}
+
+span.bg-black\/65 *,
+span.bg-black\/60 *,
+span.bg-black\/70 *,
+div[class*="absolute top-"] > span[class*="rounded-full"] *,
+div[class*="absolute top-"] > div[class*="rounded-full"] *,
+div[class*="absolute"] > span[class*="bg-black/"] *,
+div[class*="absolute"] > div[class*="bg-black/"] * {
+  color: var(--jp-charred-timber) !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   FEATURE CARDS, PILLARS, GUARANTEES & CONTENT BLOCKS
+   Converts all pitch-black cards to Japandi Nature Oat Milk & Porcelain
+   ========================================================================== */
+
+/* All dark card containers */
+.bg-\[\#212121\],
+.bg-\[\#1f1f1f\],
+.bg-\[\#1e1e1e\],
+.bg-\[\#181818\],
+.bg-\[\#161616\],
+.bg-\[\#1a1a1a\],
+.bg-\[\#1c1c1c\],
+.bg-\[\#222\],
+.bg-\[\#222222\],
+.bg-\[\#252525\],
+.bg-\[\#282828\],
+.bg-\[\#2a2a2a\],
+.bg-\[\#2c2c2c\],
+li.bg-\[\#212121\],
+div.bg-\[\#212121\] {
+  background-color: var(--jp-card-bg) !important;
+  border-color: var(--jp-border-soft) !important;
+  box-shadow: 0 4px 20px rgba(39, 34, 30, 0.05) !important;
+}
+
+/* Remove harsh jet-black drop shadows from cards on light canvas */
+[class*="shadow-\[0_7px_30px"],
+[class*="shadow-\[0px_7px_30px"] {
+  box-shadow: 0 4px 20px rgba(39, 34, 30, 0.05) !important;
+}
+
+/* Text inside feature/pillar/guarantee cards */
+.bg-\[\#212121\] h3,
+.bg-\[\#212121\] h4,
+.bg-\[\#1f1f1f\] h3,
+.bg-\[\#1f1f1f\] h4,
+.bg-\[\#1e1e1e\] h3,
+.bg-\[\#1e1e1e\] h4,
+li.bg-\[\#212121\] h3,
+li.bg-\[\#212121\] h4,
+div.bg-\[\#212121\] h3,
+div.bg-\[\#212121\] h4 {
+  color: var(--jp-charred-timber) !important;
+  font-weight: 700 !important;
+}
+
+.bg-\[\#212121\] p,
+.bg-\[\#1f1f1f\] p,
+.bg-\[\#1e1e1e\] p,
+li.bg-\[\#212121\] p,
+div.bg-\[\#212121\] p,
+.bg-\[\#212121\] div[class*="text-xs"],
+.bg-\[\#212121\] div[class*="text-sm"] {
+  color: var(--jp-stone-gray-dark) !important;
+  font-weight: 400 !important;
+}
+
+/* Card hover animation */
+li.bg-\[\#212121\]:hover,
+div.bg-\[\#212121\]:hover,
+.bg-\[\#212121\]:hover {
+  border-color: var(--jp-light-oak) !important;
+  box-shadow: 0 12px 30px rgba(184, 149, 110, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Feature card icons frame */
+li.bg-\[\#212121\] img,
+div.bg-\[\#212121\] img {
+  filter: drop-shadow(0 2px 4px rgba(39, 34, 30, 0.12));
+}
+
+/* ==========================================================================
+   BUTTONS & CONTROLS — COMPLETE JAPANDI NATURE OVERHAUL
+   Replaces dark/black buttons with Oat Milk, Sand Beige & Soft Sage
+   ========================================================================== */
+
+/* 1. FILTER PILLS & CATEGORY BUTTONS (INACTIVE STATES) */
+button.bg-\[\#1e1e1e\],
+button.bg-\[\#181818\],
+button.bg-\[\#161616\],
+button.bg-\[\#202020\],
+button.bg-\[\#222\],
+button.bg-\[\#222222\],
+button.bg-\[\#252525\],
+button.bg-\[\#282828\],
+button.bg-\[\#2a2a2a\],
+button.bg-\[\#2e2e2e\],
+button.bg-\[\#1b1b1b\],
+button.bg-\[\#1b1b1b\]\/90,
+button.bg-\[\#242e39\],
+button.bg-\[\#2b3745\],
+button.bg-\[\#1f2832\],
+button.bg-\[\#262626\],
+button.bg-\[\#262626\]\/80,
+button.bg-black\/60,
+button.bg-black\/40 {
+  background-color: var(--jp-oat-milk-light) !important;
+  border: 1.5px solid var(--jp-border-soft) !important;
+  color: var(--jp-charred-timber) !important;
+  box-shadow: 0 2px 6px rgba(39, 34, 30, 0.04) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+button.bg-\[\#1e1e1e\]:hover,
+button.bg-\[\#181818\]:hover,
+button.bg-\[\#161616\]:hover,
+button.bg-\[\#202020\]:hover,
+button.bg-\[\#222\]:hover,
+button.bg-\[\#222222\]:hover,
+button.bg-\[\#252525\]:hover,
+button.bg-\[\#282828\]:hover,
+button.bg-\[\#2a2a2a\]:hover,
+button.bg-\[\#2e2e2e\]:hover,
+button.bg-\[\#1b1b1b\]:hover,
+button.bg-\[\#1b1b1b\]\/90:hover,
+button.bg-\[\#242e39\]:hover,
+button.bg-\[\#2b3745\]:hover,
+button.bg-\[\#1f2832\]:hover,
+button.bg-\[\#262626\]:hover,
+button.bg-\[\#262626\]\/80:hover {
+  background-color: var(--jp-sand-beige-light) !important;
+  border-color: var(--jp-light-oak) !important;
+  color: var(--jp-charred-timber) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(184, 149, 110, 0.15) !important;
+}
+
+/* Ensure text and counters inside inactive buttons are legible Charred Timber */
+button.bg-\[\#1e1e1e\] span,
+button.bg-\[\#181818\] span,
+button.bg-\[\#161616\] span,
+button.bg-\[\#202020\] span,
+button.bg-\[\#222\] span,
+button.bg-\[\#282828\] span,
+button.bg-\[\#242e39\] span {
+  color: var(--jp-charred-timber) !important;
+}
+
+/* 2. ACTIVE FILTER PILLS & SELECTED BUTTONS (SOFT SAGE HIGHLIGHT) */
+button.bg-\[\#aeb8c2\],
+button.border-\[\#aeb8c2\],
+button[class*="bg-\[\#aeb8c2\]"]:not(.design-tool-card):not(#header-design-mega-menu button):not(#header-mega-menu button):not(#header-living-mega-menu button),
+button[class*="bg-\[\#88967c\]"]:not(.design-tool-card):not(#header-design-mega-menu button):not(#header-mega-menu button):not(#header-living-mega-menu button) {
+  background-color: var(--jp-soft-sage) !important;
+  border: 1.5px solid var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(136, 150, 124, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+button.bg-\[\#aeb8c2\]:hover,
+button[class*="bg-\[\#88967c\]"]:not(.design-tool-card):not(#header-design-mega-menu button):not(#header-mega-menu button):not(#header-living-mega-menu button):hover {
+  background-color: var(--jp-soft-sage-dark) !important;
+  border-color: var(--jp-soft-sage-dark) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+button.bg-\[\#aeb8c2\] span,
+button.border-\[\#aeb8c2\] span,
+button[class*="bg-\[\#aeb8c2\]"]:not(.design-tool-card):not(#header-design-mega-menu button):not(#header-mega-menu button):not(#header-living-mega-menu button) span,
+button[class*="bg-\[\#88967c\]"]:not(.design-tool-card):not(#header-design-mega-menu button):not(#header-mega-menu button):not(#header-living-mega-menu button) span {
+  color: #ffffff !important;
+}
+
+/* DESIGN MEGA MENU TOOL CARDS GRAPHICS */
+#header-design-mega-menu .design-tool-card,
+.design-tool-card {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  border-radius: 12px !important;
+}
+
+#header-design-mega-menu .design-tool-card:hover,
+.design-tool-card:hover {
+  background: rgba(136, 150, 124, 0.08) !important;
+  border-color: rgba(136, 150, 124, 0.22) !important;
+  transform: translateX(3px) !important;
+}
+
+#header-design-mega-menu .design-tool-card span,
+.design-tool-card span {
+  color: inherit !important;
+}
+
+#header-design-mega-menu .design-tool-card:hover span.text-xs,
+.design-tool-card:hover span.text-xs {
+  color: var(--jp-charred-timber) !important;
+  font-weight: 700 !important;
+}
+
+#header-design-mega-menu .design-tool-card svg {
+  display: block;
+}
+
+/* 3. CATALOG CATEGORY TABS (ALL, CABINET, UPHOLSTERED, IN STOCK, BY ROOM) */
+button.border-b-2,
+button[class*="border-b-2"] {
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  padding-top: 4px !important;
+  padding-bottom: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.4 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+button.border-b-2[class*="border-white"],
+button.border-b-2.border-white,
+button.border-b-2[class*="border-\[\#88967c\]"] {
+  background-color: transparent !important;
+  border-bottom: 2.5px solid var(--jp-soft-sage) !important;
+  color: var(--jp-charred-timber) !important;
+  font-weight: 800 !important;
+}
+
+button.border-b-2[class*="border-transparent"],
+button.border-b-2.border-transparent {
+  background-color: transparent !important;
+  border-bottom: 2.5px solid transparent !important;
+  color: var(--jp-stone-gray-dark) !important;
+}
+
+button.border-b-2[class*="border-transparent"]:hover,
+button.border-b-2.border-transparent:hover {
+  background-color: transparent !important;
+  color: var(--jp-charred-timber) !important;
+  border-bottom-color: var(--jp-sand-beige) !important;
+}
+
+/* 4. FILTER CHIPS & APPLIED TAGS */
+span.bg-\[\#1e1e1e\],
+span.bg-\[\#181818\],
+span.bg-\[\#222\],
+span[class*="bg-\[\#1e1e1e\]"] {
+  background-color: var(--jp-sand-beige-light) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  color: var(--jp-charred-timber) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 4px rgba(39, 34, 30, 0.05) !important;
+}
+
+span.bg-\[\#1e1e1e\] span,
+span.bg-\[\#1e1e1e\] button,
+span[class*="bg-\[\#1e1e1e\]"] button {
+  color: var(--jp-charred-timber) !important;
+}
+
+/* 5. FILTER DROPDOWN CONTAINER BARS (TYPE, COLOR, MATERIAL, SORT) */
+div.bg-\[\#161616\].border-\[\#2d2d2d\],
+div.bg-\[\#181818\].border-\[\#2d2d2d\],
+div[class*="bg-\[\#161616\]"],
+div[class*="bg-\[\#181818\]"] {
+  background-color: var(--jp-oat-milk-light) !important;
+  border-color: var(--jp-border-soft) !important;
+}
+
+/* Filter bar splitters */
+div.divide-\[\#2d2d2d\] > * {
+  border-color: var(--jp-border-soft) !important;
+}
+
+/* Filter dropdown toggle buttons */
+div[class*="bg-\[\#161616\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full),
+div[class*="bg-\[\#181818\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full) {
+  color: var(--jp-charred-timber) !important;
+}
+
+div[class*="bg-\[\#161616\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full):hover,
+div[class*="bg-\[\#181818\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full):hover {
+  background-color: var(--jp-sand-beige-light) !important;
+}
+
+div[class*="bg-\[\#161616\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full) span,
+div[class*="bg-\[\#181818\]"] button:not(.bg-white):not([class*="bg-white"]):not([class*="bg-\[\#27221e\]"]):not(.btn-primary):not([class*="text-white"]):not(.rounded-full) span {
+  color: var(--jp-charred-timber) !important;
+}
+
+/* 6. PRIMARY PILL BUTTONS (CHARRED TIMBER & SOFT SAGE) */
+button.bg-white,
+a.bg-white,
+.btn-primary,
+button[class*="bg-white"],
+a[class*="bg-white"],
+button.bg-\[\#27221e\],
+button[class*="bg-\[\#27221e\]"] {
+  background-color: var(--jp-charred-timber) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 14px rgba(39, 34, 30, 0.18) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Force pure white text on primary buttons across all child nodes */
+button.bg-white,
+button.bg-white *,
+a.bg-white,
+a.bg-white *,
+.btn-primary,
+.btn-primary *,
+button[class*="bg-white"],
+button[class*="bg-white"] *,
+button.bg-\[\#27221e\],
+button.bg-\[\#27221e\] *,
+button[class*="bg-\[\#27221e\]"],
+button[class*="bg-\[\#27221e\]"] * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+button.bg-white:hover,
+a.bg-white:hover,
+.btn-primary:hover,
+button[class*="bg-white"]:hover,
+button.bg-\[\#27221e\]:hover,
+button[class*="bg-\[\#27221e\]"]:hover {
+  background-color: var(--jp-soft-sage) !important;
+  border-color: var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(136, 150, 124, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+button.bg-white:hover *,
+a.bg-white:hover *,
+.btn-primary:hover *,
+button[class*="bg-white"]:hover *,
+button.bg-\[\#27221e\]:hover *,
+button[class*="bg-\[\#27221e\]"]:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* 7. SECONDARY OUTLINED PILL BUTTONS (LIGHT OAK & CHARRED TIMBER) */
+button.border-\[\#444\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+button.border-\[\#333\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+button.border-\[\#383838\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+button.border-\[\#353535\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+button.border-\[\#2d2d2d\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+button.border-white:not(.border-b-2):not([class*="border-b"]):not(.group\/col),
+.btn-secondary {
+  background-color: var(--jp-oat-milk) !important;
+  border: 1.5px solid var(--jp-charred-timber) !important;
+  border-radius: 9999px !important;
+  color: var(--jp-charred-timber) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  transition: all 0.25s ease !important;
+}
+
+button.border-\[\#444\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+button.border-\[\#333\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+button.border-\[\#383838\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+button.border-\[\#353535\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+button.border-\[\#2d2d2d\]:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+button.border-white:not(.border-b-2):not([class*="border-b"]):not(.group\/col):hover,
+.btn-secondary:hover {
+  background-color: var(--jp-light-oak) !important;
+  border-color: var(--jp-light-oak) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(184, 149, 110, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+button.border-\[\#444\]:not(.border-b-2):hover span,
+button.border-\[\#333\]:not(.border-b-2):hover span,
+button.border-\[\#383838\]:not(.border-b-2):hover span,
+button.border-\[\#353535\]:not(.border-b-2):hover span,
+button.border-\[\#2d2d2d\]:not(.border-b-2):hover span,
+button.border-white:not(.border-b-2):hover span,
+.btn-secondary:hover span {
+  color: #ffffff !important;
+}
+
+/* 8. ROUND ACTION & ICON BUTTONS (WISHLIST, CLOSE, ARROWS) */
+button[id^="wishlist-btn-"] {
+  border: 1px solid var(--jp-border-soft) !important;
+  background-color: var(--jp-oat-milk-light) !important;
+  color: var(--jp-charred-timber) !important;
+  box-shadow: 0 2px 8px rgba(39, 34, 30, 0.08) !important;
+}
+
+button[id^="wishlist-btn-"]:hover {
+  background-color: var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+  border-color: var(--jp-soft-sage) !important;
+  transform: scale(1.1) !important;
+}
+
+/* ==========================================================================
+   MODALS, DRAWERS & DIALOGS — OAT MILK & SAND BEIGE
+   ========================================================================== */
+
+.fixed.inset-0.bg-black\/80,
+.fixed.inset-0.bg-black\/70,
+.fixed.inset-0.bg-black\/60 {
+  background-color: rgba(39, 34, 30, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Modal Content Cards */
+.bg-\[\#181818\],
+.bg-\[\#141414\],
+.bg-\[\#1f1f1f\] {
+  background-color: var(--jp-oat-milk-light) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(39, 34, 30, 0.12) !important;
+}
+
+/* Inputs in Modals & Forms */
+input, select, textarea {
+  background-color: var(--jp-canvas-bg) !important;
+  color: var(--jp-charred-timber) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  border-radius: 8px !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--jp-soft-sage) !important;
+  outline: none !important;
+}
+
+/* ==========================================================================
+   FOOTER — JAPANDI SAND BEIGE & LIGHT OAK
+   ========================================================================== */
+
+footer,
+footer.bg-\[\#141414\],
+footer.bg-\[\#181818\],
+footer.bg-black {
+  background-color: var(--jp-sand-beige-light) !important;
+  border-top: 1px solid var(--jp-border-soft) !important;
+  color: var(--jp-charred-timber) !important;
+}
+
+footer h4,
+footer h3,
+footer span,
+footer a,
+footer p {
+  color: var(--jp-charred-timber) !important;
+}
+
+footer a:hover {
+  color: var(--jp-soft-sage) !important;
+}
+
+/* Floating Concierge (Japandi Soft Sage Pill Button) */
+#concierge-float-btn,
+button#concierge-float-btn,
+.fixed.bottom-6.right-6 button {
+  background-color: var(--jp-soft-sage) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 6px 20px rgba(136, 150, 124, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+#concierge-float-btn:hover,
+button#concierge-float-btn:hover,
+.fixed.bottom-6.right-6 button:hover {
+  background-color: var(--jp-soft-sage-hover) !important;
+  transform: translateY(-2px) !important;
+}
+
+.fixed.bottom-6.right-6 button svg {
+  color: #ffffff !important;
+}
+
+/* Keep the two desktop flyouts inside the viewport and allow long titles to wrap. */
+#header-design-mega-menu {
+  left: -16rem !important;
+  right: auto !important;
+  max-width: calc(100vw - 2rem) !important;
+}
+
+#header-living-mega-menu {
+  left: auto !important;
+  right: 0 !important;
+  max-width: calc(100vw - 2rem) !important;
+}
+
+#header-design-mega-menu .design-tool-card,
+#header-living-mega-menu .group\/item {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#header-design-mega-menu .design-tool-card > div,
+#header-living-mega-menu .group\/item > div,
+#header-design-mega-menu .design-tool-card .flex-col,
+#header-living-mega-menu .group\/item .flex-col {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#header-design-mega-menu .design-tool-card span,
+#header-living-mega-menu .group\/item span {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+
+#header-design-mega-menu .design-tool-card .flex.items-center,
+#header-living-mega-menu .group\/item .flex.items-center {
+  flex-wrap: wrap !important;
+}
+
+#header-design-mega-menu > .mt-6,
+#header-living-mega-menu > .mt-4 {
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+#header-design-mega-menu > .mt-6 > *,
+#header-living-mega-menu > .mt-4 > * {
+  min-width: 0 !important;
+}
+
+@media (max-width: 1100px) {
+  #header-design-mega-menu {
+    left: auto !important;
+    right: -8rem !important;
+  }
+}
+
+/* Catalogue flyout: align the three headings and keep heading arrows inside their columns. */
+#header-mega-menu > .grid {
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 0.85fr) !important;
+  gap: 2rem !important;
+}
+
+#header-mega-menu > .grid > .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 2rem !important;
+}
+
+#header-mega-menu > .grid > *,
+#header-mega-menu > .grid > .grid > * {
+  min-width: 0 !important;
+}
+
+#header-mega-menu button.group\/col {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  min-height: 2.4rem !important;
+}
+
+#header-mega-menu button.group\/col > div:first-child {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+#header-mega-menu button.group\/col > div:last-child {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+}
+
+#header-mega-menu button.group\/col span {
+  display: block !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.4 !important;
+}
+
+#header-mega-menu > .grid > .border-l > div:first-child {
+  min-height: 2.4rem !important;
+  align-items: center !important;
+}
+
+@media (max-width: 1100px) {
+  #header-mega-menu {
+    left: 0 !important;
+    width: min(1040px, calc(100vw - 2rem)) !important;
+  }
+}
+
+/* Contacts hero: natural image treatment and readable warm text on the light gradient. */
+#contacts-page > div:first-child {
+  padding-top: clamp(7.5rem, 11vw, 10rem) !important;
+}
+
+#contacts-page > div:first-child > div:first-child {
+  margin-bottom: 1.25rem !important;
+}
+
+#contacts-page > div:first-child > div:first-child button {
+  background: var(--jp-oat-milk-light) !important;
+  border: 1px solid var(--jp-border-soft) !important;
+  color: var(--jp-charred-timber) !important;
+  box-shadow: 0 3px 12px rgba(39, 34, 30, 0.08) !important;
+}
+
+#contacts-page > div:first-child > div:first-child button:hover {
+  background: var(--jp-sand-beige-light) !important;
+}
+
+#contacts-page > div:first-child > div:first-child button span {
+  color: inherit !important;
+}
+
+#contacts-page .contact-hero-copy {
+  max-width: min(42rem, calc(100% - 3rem)) !important;
+  text-shadow: 0 1px 12px rgba(247, 243, 236, 0.8);
+}
+
+#contacts-page .contact-hero-copy h1 {
+  color: var(--jp-charred-timber) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.025em !important;
+}
+
+#contacts-page .contact-hero-copy p,
+#contacts-page .contact-hero-copy span {
+  color: var(--jp-charred-timber) !important;
+}
+
+/* Room detail: keep the materials consultation panel legible on the light site. */
+.materials-consultation {
+  background: linear-gradient(145deg, #f8f5ef, #eae2d5) !important;
+  border-color: var(--jp-border-soft) !important;
+  box-shadow: 0 18px 44px rgba(39, 34, 30, 0.09) !important;
+}
+
+.materials-consultation h2 {
+  color: var(--jp-charred-timber) !important;
+}
+
+.materials-consultation button {
+  background: var(--jp-soft-sage-dark) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(88, 100, 78, 0.2) !important;
+}
+
+.materials-consultation button:hover {
+  background: var(--jp-charred-timber) !important;
+}
+
+@media (max-width: 640px) {
+  #contacts-page .contact-hero-copy {
+    left: 1.25rem !important;
+    bottom: 1.5rem !important;
+    max-width: calc(100% - 2.5rem) !important;
+  }
+}
+
+/* The contact photograph is dark; use the same warm, legible card treatment as the rest of B+IN. */
+#contacts-page .contact-hero-copy {
+  padding: clamp(1rem, 2.4vw, 2rem) !important;
+  border: 1px solid rgba(221, 214, 203, 0.8) !important;
+  border-radius: 1.25rem !important;
+  background: rgba(247, 243, 236, 0.94) !important;
+  box-shadow: 0 18px 45px rgba(39, 34, 30, 0.18) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  text-shadow: none !important;
+}
+
+#contacts-page .contact-hero-copy h1 {
+  margin-top: 0.5rem !important;
+  text-shadow: none !important;
+}
+
+#contacts-page .contact-hero-copy p {
+  margin-top: 0.75rem !important;
+  font-size: clamp(0.875rem, 1.2vw, 1rem) !important;
+  line-height: 1.65 !important;
+  max-width: 35rem !important;
+}
+
+#contacts-page .contact-hero-copy img {
+  opacity: 1 !important;
+}
+
+#contacts-page .contact-hero-copy > div span {
+  letter-spacing: 0.14em !important;
+}
+
+/* Custom B+IN atelier illustrations: one cohesive line-icon family for About. */
+.about-feature-card .about-feature-icon {
+  align-self: flex-end;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--jp-border-soft);
+  border-radius: 1.15rem;
+  background: var(--jp-oat-milk);
+  color: var(--jp-soft-sage-dark);
+  transition: background-color 250ms ease, border-color 250ms ease, transform 250ms ease;
+}
+
+.about-feature-card .about-feature-icon svg {
+  width: 2.9rem;
+  height: 2.9rem;
+  color: inherit !important;
+  flex: none;
+}
+
+.about-feature-card:hover .about-feature-icon {
+  background: var(--jp-soft-sage-light);
+  border-color: var(--jp-soft-sage);
+  transform: translateY(-2px);
+}
+
+/* Supplied four-icon artwork for the About feature cards. */
+.about-feature-card .about-feature-icon {
+  width: 5.75rem !important;
+  height: 5.75rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.about-feature-card .about-feature-icon .about-feature-artwork {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
+}
+
+.about-feature-card:hover .about-feature-icon {
+  background: transparent !important;
+  border: 0 !important;
+  transform: none !important;
+}
+
+/* Actual 3-D icon artwork supplied for the About page. */
+.about-feature-card .about-feature-icon {
+  width: 7rem !important;
+  height: 7rem !important;
+  overflow: hidden;
+  border-radius: 1rem !important;
+}
+
+.about-feature-card .about-feature-icon .about-feature-artwork {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 640px) {
+  .about-feature-card .about-feature-icon {
+    width: 5.75rem !important;
+    height: 5.75rem !important;
+  }
+}

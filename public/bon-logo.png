@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 60" width="340" height="60" fill="none">
+  <text x="4" y="44" font-family="'Plus Jakarta Sans', 'Manrope', sans-serif" font-size="44" font-weight="900" fill="#27221E" letter-spacing="-1">B<tspan fill="#88967C">+</tspan>IN</text>
+  <line x1="130" y1="16" x2="130" y2="44" stroke="#B8956E" stroke-width="1.5" />
+  <text x="144" y="32" font-family="'Plus Jakarta Sans', 'Manrope', sans-serif" font-size="11" font-weight="700" fill="#27221E" letter-spacing="3.5">JAPANDI NATURE</text>
+  <text x="144" y="44" font-family="'Plus Jakarta Sans', 'Manrope', sans-serif" font-size="8.5" font-weight="600" fill="#736C64" letter-spacing="2.5">FURNITURE ATELIER</text>
+</svg>
