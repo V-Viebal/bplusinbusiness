@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    build: { rollupOptions: { input: { main: path.resolve(__dirname, 'index.html'), furniture: path.resolve(__dirname, 'legacy-furniture/index.html') } } },
+    build: { rollupOptions: { input: { main: path.resolve(__dirname, 'index.html') } } },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
